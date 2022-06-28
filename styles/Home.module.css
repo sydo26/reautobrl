@@ -1,0 +1,272 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-top: 280px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: repeat-x;
+  background-image: url(/bg-dogs.jpg);
+  filter: brightness(1.3) contrast(1.1);
+}
+
+.coins {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  max-width: 888px;
+  min-width: 280px;
+  height: auto;
+  margin: 0 auto;
+  transform: translateY(-80px);
+}
+
+.title {
+  color: #333333;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.wrapperimage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 122px;
+  min-height: 122px;
+  margin: 0 auto;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.image {
+  position: relative;
+  display: block;
+  width: 122px;
+  height: 122px;
+  border: none;
+  border-radius: 100px;
+  margin: 20px 0 20px;
+  background-color: black;
+  background-image: url("/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.9);
+  cursor: pointer;
+  transition: 0.4s all ease;
+}
+
+.wrapperimage:hover > .image {
+  width: 280px;
+  height: 100px;
+  background-position-y: -20px;
+  filter: brightness(1.3) contrast(1.7);
+}
+
+.refresh {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333333;
+  width: 250px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: white;
+  filter: drop-shadow(0 0 0.55rem #f3f4fd);
+  transition: 0.4s all ease;
+}
+
+.caption {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  color: #828282;
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  flex-basis: 100%;
+  text-overflow: clip;
+}
+
+.caption::before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.refresh > span {
+  opacity: 1;
+  width: 100%;
+  text-overflow: unset;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 0.4s all ease;
+}
+
+.refresh:disabled > span {
+  opacity: 0;
+  width: 0;
+}
+
+.refresh:hover {
+  filter: drop-shadow(0 0 0.75rem #56ccf2);
+}
+
+/* .refresh:disabled > div {
+  display: block;
+} */
+
+.refresh:disabled {
+  cursor: default;
+  filter: drop-shadow(0 0 0.75rem #e2e5ff) !important;
+  width: 46px;
+}
+
+.refresh:disabled > svg {
+  width: 100%;
+  animation: rotate 0.2s ease 0s infinite normal both;
+}
+
+.refresh:disabled > label {
+  color: #6fcf97;
+  font-size: 16;
+  font-weight: 700;
+  filter: drop-shadow(0 0 0.02rem #6fcf97);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.compare {
+  width: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-weight: 500;
+  color: #333333;
+  font-size: 24px;
+}
+
+.flex {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.flexwrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.backtop {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  margin: 0 auto 40px auto;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.backtop:hover {
+  filter: brightness(0.99);
+}
+
+.backtop > svg {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: #333333;
+}
+
+@media screen and (max-width: 888px) {
+  .main {
+    max-width: 414px;
+  }
+  .compare {
+    width: 100%;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 25px;
+  }
+  .flex {
+    flex-wrap: wrap !important;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .main {
+    max-width: 300px;
+  }
+}

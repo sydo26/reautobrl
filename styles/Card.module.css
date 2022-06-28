@@ -1,0 +1,130 @@
+.content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  grid-template-columns: calc(50% - 25px) calc(50% - 25px);
+}
+
+.content_left .title > span {
+  margin-left: 10px;
+}
+
+.content_right .title > span {
+  margin-right: 10px;
+}
+
+.content_right .title::before {
+  left: 0;
+}
+
+.col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.title::before {
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  content: "";
+  bottom: 0;
+  right: 0;
+}
+
+.title > span {
+  width: auto;
+  color: #333333;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.title > a {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.title:hover > a {
+  opacity: 1;
+}
+
+.children {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4f4f4f;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.children a {
+  color: #56ccf2;
+}
+
+.children a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 888px) {
+  .col {
+    min-height: 0 !important;
+    margin-bottom: 35px;
+  }
+
+  .title::before {
+    width: 70%;
+    bottom: -15px;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .title > a {
+    margin: 0 auto;
+  }
+
+  .title > span {
+    width: 100%;
+    font-size: 32px;
+  }
+
+  .children {
+    align-items: flex-start;
+  }
+  .content {
+    grid-template-columns: 100% !important;
+    grid-template-rows: auto auto !important;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+}
